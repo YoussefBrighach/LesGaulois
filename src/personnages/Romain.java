@@ -1,4 +1,4 @@
-package lesromains;
+package personnages;
 
 public class Romain {
 
