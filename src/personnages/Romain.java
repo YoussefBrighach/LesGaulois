@@ -23,16 +23,16 @@ public class Romain {
 		// TODO Auto-generated method stub
 		return "Le romain " + nom + " : ";
 	}
-	
+
 	public void recevoirCoup(int forceCoup) {
-		if(forceCoup < 1) {
+		force -= forceCoup;
+		if (force < 1) {
 			parler("J'abandonne !");
-			
-		}
-		else {
+
+		} else {
 			parler("Aïe");
 		}
-		
+
 	}
 
 }

@@ -1,7 +1,5 @@
 package personnages;
 
-import javax.sound.midi.SysexMessage;
-
 public class Gaulois {
 
 	private String nom;
@@ -26,23 +24,33 @@ public class Gaulois {
 		// TODO Auto-generated method stub
 		return "Le gaulois " + nom + " : ";
 	}
-	
+
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mï¿½choire de " + romain.getNom());
-		romain.recevoirCoup(force / 3);
-		
+
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
+		romain.recevoirCoup(force * effetPotion / 3);
+		effetPotion--;
+
+		if (effetPotion < 1) {
+			effetPotion = 1;
+		}
+
 	}
 
-	public static void main(String[] args) {
-		
-		Gaulois asterix = new Gaulois("Astï¿½rix", 8);
-		System.out.println(asterix);
-		
-		
+	public void boirePotion(int forcePotion) {
+		this.effetPotion = forcePotion;
+
 	}
 
 	@Override
 	public String toString() {
 		return nom;
+	}
+
+	public static void main(String[] args) {
+
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		System.out.println(asterix);
+
 	}
 }

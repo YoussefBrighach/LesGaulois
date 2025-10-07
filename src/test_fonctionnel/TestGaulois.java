@@ -2,6 +2,8 @@ package test_fonctionnel;
 
 import java.security.PublicKey;
 
+import personnages.Chaudron;
+import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Romain;
 
@@ -12,6 +14,13 @@ public class TestGaulois {
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		Gaulois obelix = new Gaulois("Obélix", 16);
 		Romain minus = new Romain("Minus", 6);
+		Romain brutus = new Romain("Brutus", 14);
+		Chaudron chaudron = new Chaudron(4, 2);
+		Druide panoramix = new Druide("Panoramix",2, chaudron);
+		panoramix.booster(obelix);
+		panoramix.booster(asterix);
+		
+		
 
 		asterix.parler("Bonjour Obélix.");
 		obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
@@ -21,7 +30,7 @@ public class TestGaulois {
 				" tombent nez à nez sur le romain " + minus.getNom() + ".");
 		
 		for(int i = 0; i < 3; i++) {
-			asterix.frapper(minus);
+			asterix.frapper(brutus);
 
 		}
 	}
