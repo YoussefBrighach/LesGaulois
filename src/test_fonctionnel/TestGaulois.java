@@ -11,25 +11,25 @@ public class TestGaulois {
 
 	public static void main(String[] args) {
 
-		Gaulois asterix = new Gaulois("Astérix", 8);
-		Gaulois obelix = new Gaulois("Obélix", 16);
+		Gaulois asterix = new Gaulois("AstÃ©rix", 8);
+		Gaulois obelix = new Gaulois("ObÃ©lix", 16);
 		Romain minus = new Romain("Minus", 6);
 		Romain brutus = new Romain("Brutus", 14);
-		Chaudron chaudron = new Chaudron(4, 2);
-		Druide panoramix = new Druide("Panoramix",2, chaudron);
+		Chaudron chaudron = new Chaudron(4, 3);
+		Druide panoramix = new Druide("Panoramix", 2, chaudron);
+
+		asterix.parler("Bonjour ObÃ©lix.");
+		obelix.parler("Bonjour AstÃ©rix. Ca te dirais d'aller chasser des sangliers ?");
+		asterix.parler("Oui trï¿½s bonne idï¿½e.");
+
+		System.out.println("Dans la forï¿½t " + asterix.getNom() + " et " + obelix.getNom()
+				+ " tombent nez ï¿½ nez sur le romain " + minus.getNom() + ".");
+
+		panoramix.fabriquerPotion(4, 3);
 		panoramix.booster(obelix);
 		panoramix.booster(asterix);
-		
-		
 
-		asterix.parler("Bonjour Obélix.");
-		obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
-		asterix.parler("Oui très bonne idée.");
-		
-		System.out.println("Dans la forêt " + asterix.getNom() +" et " + obelix.getNom() + 
-				" tombent nez à nez sur le romain " + minus.getNom() + ".");
-		
-		for(int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3; i++) {
 			asterix.frapper(brutus);
 
 		}

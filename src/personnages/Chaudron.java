@@ -11,26 +11,16 @@ public class Chaudron {
 	}
 
 	public boolean resterPotion() {
-
-		if (quantitePotion == 0) {
-			return false;
-		} else {
-			return true;
-		}
-
+		return quantitePotion > 0;
 	}
 
 	public int prendreLouche() {
-
-		while (quantitePotion > 0) {
+		if (quantitePotion > 0) {
 			quantitePotion--;
+			return forcePotion;
+		} else {
+			return 0;
 		}
-
-		if (quantitePotion == 0) {
-			forcePotion = 0;
-		}
-
-		return forcePotion;
 	}
 
 	public void remplirChaudron(int quantite, int forcePotion) {

@@ -27,8 +27,10 @@ public class Gaulois {
 
 	public void frapper(Romain romain) {
 
-		System.out.println(nom + " envoie un grand coup dans la m‚choire de " + romain.getNom());
-		romain.recevoirCoup(force * effetPotion / 3);
+		int forceCoup = (force * effetPotion) / 3;
+
+		System.out.println(nom + " envoie un grand coup dans la m√¢choire de " + romain.getNom());
+		romain.recevoirCoup(forceCoup);
 		effetPotion--;
 
 		if (effetPotion < 1) {
@@ -49,7 +51,7 @@ public class Gaulois {
 
 	public static void main(String[] args) {
 
-		Gaulois asterix = new Gaulois("AstÈrix", 8);
+		Gaulois asterix = new Gaulois("Ast√©rix", 8);
 		System.out.println(asterix);
 
 	}
