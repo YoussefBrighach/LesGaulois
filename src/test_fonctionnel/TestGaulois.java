@@ -20,10 +20,10 @@ public class TestGaulois {
 
 		asterix.parler("Bonjour Obélix.");
 		obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
-		asterix.parler("Oui tr�s bonne id�e.");
+		asterix.parler("Oui très bonne idée.");
 
-		System.out.println("Dans la for�t " + asterix.getNom() + " et " + obelix.getNom()
-				+ " tombent nez � nez sur le romain " + minus.getNom() + ".");
+		System.out.println("Dans la forêt " + asterix.getNom() + " et " + obelix.getNom()
+				+ " tombent nez à nez sur le romain " + minus.getNom() + ".");
 
 		panoramix.fabriquerPotion(4, 3);
 		panoramix.booster(obelix);

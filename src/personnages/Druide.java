@@ -34,7 +34,7 @@ public class Druide {
 	public void booster(Gaulois gaulois) {
 		String nomGaulois = gaulois.getNom();
 
-		if (nomGaulois.equals("Obélix")) {
+		if (nomGaulois != null && nomGaulois.equals("Obélix")) {
 			parler("Non, " + nomGaulois + " Non !... Et tu le sais très bien !");
 			return;
 		}
